@@ -5,18 +5,19 @@
   <meta charset="utf-8">
   <title>Image Classification</title>
   <link rel="stylesheet" href="{% static 'css/classify.css' %}" type="text/css" />
-  <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"  type="text/css">
-  <link  href="{% static 'css/bootstrap.min.css' %}"   type="text/css">
-  <script type="text/javascript"src="{% static 'js/jquery-1.12.4.js' %}"></script>
-  <script  type="text/javascript"src="{% static 'js/sharer.min.js' %}"></script>
+  <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
   <script type="text/javascript"src="{% static 'js/classify.js' %}"></script>
 </head>
+
 <body>
   <div class="table">
     <div class="table-cell">
       <div class="modal">
         <button type="button" id="clear" class="clear" style=" display: none; " >Reset</button>
-      <div id="profile" style="margin-left: 35%;" >
+      <div id="profile"  >
         <label>Upload or Drag And Drop Your Dog Photo Here</label></div>
      
         <div class="editable" style="display: none;"><input  type="text" id="mydog" name="DogName" placeholder="Enter Your Dog's Name" /><span id="numloc"></span> </div>
