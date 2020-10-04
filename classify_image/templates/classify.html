@@ -1,41 +1,78 @@
-
 {% load static %}
 <html>
-<head >
-  <meta charset="utf-8">
-  <title>Image Classification</title>
-  <link rel="stylesheet" href="{% static 'css/classify.css' %}" type="text/css" />
-  <link  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://cdn.jsdelivr.net/sharer.js/latest/sharer.min.js"></script>
-  <script type="text/javascript"src="{% static 'js/classify.js' %}"></script>
+<head>
+    <meta charset="utf-8">
+    <title>Image Classification</title>
+    <link href="{% static 'css/classify.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/bootstrap-social.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'js/jquery-1.12.4.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/sharer.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/classify.js' %}" type="text/javascript"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dog Breed Detector">
+    <meta name="twitter:description" content="Our Dog Scanner Artificial Intelligence Based developed using millions of classified dogs breeds pictures to achieve the maximum accurate results to fetch your dog breed.">
+    <meta name="twitter:site" content="animaldirect">
+    <meta name="twitter:image" content="https://animal.direct/files/watermark/dbd.png">
+
+    <meta property="og:title" content="Dog Breed Detector">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Our Dog Scanner Artificial Intelligence Based, has been developed using millions of classified dogs breeds pictures to achieve the maximum accurate results to fetch your dog breed without paying high amounts.">
+    <meta property="og:image" content="https://animal.direct/files/watermark/dbd.png">
+    <meta property="og:url" content="https://animal.direct/dog-scanner.html">
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="400" />
 </head>
-
 <body>
-  <div class="table">
-    <div class="table-cell">
-      <div class="modal">
-        <button type="button" id="clear" class="clear" style=" display: none; " >Reset</button>
-      <div id="profile"  >
-        <label>Upload or Drag And Drop Your Dog Photo Here</label></div>
-     
-        <div class="editable" style="display: none;"><input  type="text" id="mydog" name="DogName" placeholder="Enter Your Dog's Name" /><span id="numloc"></span> </div>
+<div class="c-container">
+    <div class="main-frame">
+        <button class="btn btn-danger" id="clear" style="display: none;" type="button">Reset</button>
+        <div id="profile" style="align-content:center;">
+            <label>Upload or Drag And Drop Your Dog Photo Here</label>
+        </div>
+        <div class="editable" style="display: none;">
+            <input class="form-control" id="mydog" name="DogName" placeholder="Enter Your Dog's Name" type="text"/>
+            <span id="numloc"></span>
+        </div>
         <img id='img-dog-src' src="" style="display: none;">
-          <button button type="button" id="predic" class="predic spinner-button btn btn-primary mb-2" style="display: none;">predic Breed of Dog</button>
-        <div class="rating-card"  >
-          <div class="rating-process">
-          </div >
-        </div>
-        <div id="social-media" style="display: none;">
-        <a href="#" id="share-fb" class="sharer button"><i class="fa fa-3x fa-facebook-square"style="float:left; padding: 0.1em"></i></a>
-        <a href="#" id="share-tw" class="sharer button"><i class="fa fa-3x fa-twitter-square" style="float:left;padding: 0.1em"></i></a>
-        <a href="#" id="share-li" class="sharer button"><i class="fa fa-3x fa-linkedin-square" style="float:left;padding: 0.1em"></i></a>
-        </div>
-      </div>
-    </div>
- </div>
-    <input type="file" id="mediaFile" accept="image/*">
 
+        <button class="btn main-color spinner-button" id="predic" style="display: none">
+            Fetch Now
+        </button>
+
+
+        <div class="rating-card">
+            <div class="rating-process">
+
+            </div>
+        </div>
+
+        <div  id="social-media" style="display: none">
+            <div class="text">
+                <span>Share your dog's results with friends</span>
+            </div>
+            <a class="sharer btn btn-social btn-facebook" href="#" id="share-fb">
+                <span class="fa fa-facebook"></span> Facebook
+            </a>
+
+            <a class="sharer btn btn-social btn-twitter"  href="#" id="share-tw">
+                <span class="fa fa-twitter"></span> Twitter
+            </a>
+
+            <a class="sharer btn btn-social btn-linkedin"  href="#" id="share-li">
+                <span class="fa fa-linkedin"></span> LinkedIn
+            </a>
+        </div>
+
+    </div>
+</div>
+<input hidden id="purity" type="text"/>
+<input accept="image/*" id="mediaFile" type="file"/>
 </body>
 </html>
